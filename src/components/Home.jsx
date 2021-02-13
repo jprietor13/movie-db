@@ -2,22 +2,31 @@ import React from "react";
 import { useGetListMovies } from "../hooks/useGetListMovies";
 import { Link } from "react-router-dom";
 import { URL_IMAGE } from "../services/config";
+import "../assets/styles/Home.css";
 
 export const Home = () => {
   const { data } = useGetListMovies();
   return (
-    <div className="home-container">
-      <h4 className="home-container__title">Home</h4>
+    <div className="home">
       {data.map((item) => (
-        <div className="home-container__item" key={item.id} idmovie={item.id}>
+        <div className="home__item-description" key={item.id} idmovie={item.id}>
           <Link to={`/details/${item.id}`}>
-            <img src={`${URL_IMAGE}${item.poster_path}`} alt={item.title} />
+            <img
+              className="home__item-description--item-image"
+              src={`${URL_IMAGE}${item.poster_path}`}
+              alt={item.title}
+            />
+            <span className="home__item-description--description">
+              <span className="home__item-description--description-title">
+                {item.title}
+              </span>
+              <span className="home__item-description--description-date">
+                {item.release_date}
+              </span>
+            </span>
           </Link>
-          <span className="home-container__item-title">{item.title}</span>
-          <span className="home-container__item-date">{item.release_date}</span>
         </div>
       ))}
-      {console.log(data)}
     </div>
   );
 };

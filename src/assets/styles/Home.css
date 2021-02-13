@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.home__item-description {
+  position: relative;
+  display: inherit;
+  flex-direction: column;
+  margin: 15px;
+  height: 450px;
+  overflow: hidden;
+  text-decoration: none;
+  z-index: 1;
+}
+.home__item-description:hover img {
+  opacity: 0.5;
+}
+.home__item-description:hover .home__item-description--description {
+  background-color: #032541;
+  padding: 20px 0;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+.home__item-description--item-image {
+  width: 300px;
+  border-radius: 10px;
+}
+.home__item-description--description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  top: -250px;
+  font-size: 20px;
+  color: transparent;
+  text-decoration: 0 !important;
+}
