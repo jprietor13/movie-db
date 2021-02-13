@@ -11,7 +11,7 @@ export const Home = () => {
       {data.map((item) => (
         <div className="home-container__item" key={item.id} idmovie={item.id}>
           <Link to={`/details/${item.id}`}>
-            <img src={URL_IMAGE + item.poster_path} alt={item.title} />
+            <img src={`${URL_IMAGE}${item.poster_path}`} alt={item.title} />
           </Link>
           <span className="home-container__item-title">{item.title}</span>
           <span className="home-container__item-date">{item.release_date}</span>
