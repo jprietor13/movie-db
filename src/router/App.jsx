@@ -1,13 +1,17 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Header } from "../components/Header";
-import { Home } from "../pages/Home";
+import { Home } from "../components/Home";
+import { Details } from "../components/Details";
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <Route exact path="/" component={Header} />
-      <Route exact path="/" component={Home} />
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/details" component={Details} />
+      </Switch>
     </BrowserRouter>
   );
 };
