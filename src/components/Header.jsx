@@ -5,7 +5,9 @@ import "../assets/styles/Header.css";
 export const Header = () => {
   return (
     <div className="header">
-      <img className="header__image" src={imageLogo} alt="image_logo" />
+      <a target="_blank" rel="noreferrer" href="https://www.themoviedb.org/">
+        <img className="header__image" src={imageLogo} alt="image_logo" />
+      </a>
     </div>
   );
 };

@@ -10,12 +10,6 @@ export const Details = ({ match }) => {
   const { idMovie } = match.params;
   const { detailMovie } = useGetDetailsMovie(idMovie);
   const { actorsForMovie } = useGetActorForMovie(idMovie);
-  console.log(
-    "🚀 ~ file: Details.jsx ~ line 11 ~ Details ~ actorsForMovie",
-    actorsForMovie
-  );
-
-  const dateData = new Date();
   return (
     <div className="details">
       <Link to="/">
