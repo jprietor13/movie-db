@@ -4,7 +4,7 @@ import { getListMovies } from "../services/getListMovies";
 export const useGetListMovies = () => {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
-
+  let isMounted = true;
   const getData = useCallback(async () => {
     const { results } = await getListMovies(page);
     setData([...data, ...results]);
@@ -12,6 +12,7 @@ export const useGetListMovies = () => {
 
   useEffect(() => {
     getData();
+    return (isMounted = false);
   }, [getData]);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export const useGetListMovies = () => {
         counter++;
       }
     };
-  }, [page]);
+  }, []);
 
   return { data };
 };

@@ -8,8 +8,8 @@ export const Home = () => {
   const { data } = useGetListMovies();
   return (
     <div className="home">
-      {data.map((item) => (
-        <div className="home__item-description" key={item.id} idmovie={item.id}>
+      {data.map((item, index) => (
+        <div className="home__item-description" key={index}>
           <Link to={`/details/${item.id}`}>
             <img
               className="home__item-description--item-image"
