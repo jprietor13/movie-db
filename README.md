@@ -24,4 +24,4 @@ https://challenge-vtex-alpha.vercel.app/
 - npm i react-router-dom
 
 ## Comandos para correr la aplicacion en local
-- npm run start
+- npm start
