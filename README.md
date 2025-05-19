@@ -1,7 +1,7 @@
 
-# Chanllenge VTEX
+# Movie DB
 
-Este es el repositorio realizado según los requerimientos de la prueba técnica para el cargo de desarrollador frontend para la empresa VTEX. En ella, se consume la api de películas “The Movie Data Base”  en donde en primera instancia se obtiene la lista de las últimas películas estrenadas y al dar click sobre la imagen de alguna de ellas, se accede al detalle de esta y a los actores que participaron en ella
+En este reto se consume la api de películas “The Movie Data Base”  en donde en primera instancia se obtiene la lista de las últimas películas estrenadas y al dar click sobre la imagen de alguna de ellas, se accede al detalle de esta y a los actores que participaron en ella
 
 ## URL de la aplicación
 
